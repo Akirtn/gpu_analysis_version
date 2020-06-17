@@ -1,0 +1,10 @@
+version: "3"
+services:
+  jupyter:
+    build: .
+    volumes:
+      - $PWD:/input
+    working_dir: /working
+    ports:
+      - 8080:8080
+      - 5000:6000
