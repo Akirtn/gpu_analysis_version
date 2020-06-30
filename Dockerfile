@@ -28,7 +28,10 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 # ライブラリの追加インストール
 RUN pip install -U pip && \
-    pip install fastprogress japanize-matplotlib hydra-core --upgrade --pre mlflow
+    pip install fastprogress japanize-matplotlib hydra-core --upgrade --pre mlflow \
+                allennlp \
+                janome \
+                allennlp-models \
 RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 EXPOSE 8888
 EXPOSE 5000
