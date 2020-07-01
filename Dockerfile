@@ -30,7 +30,7 @@ RUN apt-get clean && \
 RUN pip install -U pip && \
     pip install fastprogress japanize-matplotlib hydra-core --upgrade --pre mlflow \
                 allennlp \
-                janome \
+                'konoha[janome,allennlp]' \
                 allennlp-models \
 RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 EXPOSE 8888
