@@ -32,6 +32,8 @@ RUN pip install -U pip && \
                 allennlp \
                 'konoha[janome,allennlp]' \
                 allennlp-models \
+                Prophet \
+                statsmodels \
 RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 EXPOSE 8888
 EXPOSE 5000
