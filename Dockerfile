@@ -28,12 +28,7 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 # ライブラリの追加インストール
 RUN pip install -U pip && \
-    pip install fastprogress japanize-matplotlib hydra-core --upgrade --pre mlflow \
-                allennlp \
-                'konoha[janome,allennlp]' \
-                allennlp-models \
-                Prophet \
-                statsmodels \
+    pip install fastprogress japanize-matplotlib hydra-core --upgrade --pre mlflow allennlp 'konoha[all_with_integrations]' allennlp-models Prophet tatsmodels
 RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 EXPOSE 8888
 EXPOSE 5000
