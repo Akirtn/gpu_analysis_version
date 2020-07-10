@@ -3,7 +3,7 @@ services:
   jupyter:
     build: .
     volumes:
-      - $PWD:/input
+      - $PWD:/working
     working_dir: /working
     ports:
       - 8080:8080
