@@ -30,7 +30,8 @@ RUN apt-get clean && \
 RUN pip install -U pip && \
     pip install fastprogress japanize-matplotlib hydra-core --upgrade --pre mlflow allennlp 'konoha[all_with_integrations]' allennlp-models fbprophet statsmodels mecab-python3==0.996.5 unidic-lite flatten_dict
 RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64
-ENV LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 RUN export LD_LIBRARY_PATH=/opt/conda/lib
-EXPOSE 8888
+ENV LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+
+EXPOSE 8080
 EXPOSE 5000
